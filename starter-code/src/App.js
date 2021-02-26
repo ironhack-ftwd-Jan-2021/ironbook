@@ -1,19 +1,18 @@
 import './App.css';
+import React from './react'
 import users from './users.json'
 
 class App extends React.Component {
 
-    constructor() {
-        this.state = {
-            users: users,
-            search: '',
-            student: true,
-            teacher: true,
-            campus: '',
-            query: ''
-        }
+    state = {
+        users: users,
+        search: '',
+        student: true,
+        teacher: true,
+        campus: '',
+        query: ''
     }
-
+    
     handleInputChange = e => {
         const target = e.target;
         const value = target.type === 'checkbox' ? target.checked : target.value;
